@@ -1,0 +1,41 @@
+{
+  "name": "dsh-global-prompt",
+  "version": "1.0.0",
+  "description": "Global prompt editor: a Settings section that edits the user-level AGENTS.md that DSH injects into every agent session.",
+  "keywords": [
+    "dsh",
+    "dsh-plugin",
+    "deepseek-harness",
+    "agents-md",
+    "system-prompt"
+  ],
+  "author": "Y-King666",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Y-King666/dsh-global-prompt.git"
+  },
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  }
+}
